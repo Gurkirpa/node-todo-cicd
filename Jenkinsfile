@@ -7,11 +7,6 @@ pipeline{
                 
             }
         }
-        stage('Clean Workspace') {
-            steps {
-                cleanWs() // Jenkins Workspace Cleanup Plugin
-            }
-        }
         stage('Build and Test'){
             steps{
                 sh 'docker build . -t node-todo-app-cicd'
